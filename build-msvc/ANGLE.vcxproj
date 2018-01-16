@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|x64">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{CC5280B2-E30B-4BC7-B524-8DBF4900713F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ANGLE</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <ModuleDefinitionFile>export.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <ModuleDefinitionFile>export.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <ModuleDefinitionFile>export.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <ModuleDefinitionFile>export.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\common\system_utils_win.cpp" />
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="EGLWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="OSWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SampleApplication.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="shader_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="../src/common/aligned_memory.cpp" />
+    <ClCompile Include="../src/common/angleutils.cpp" />
+    <ClCompile Include="../src/common/debug.cpp" />
+    <ClCompile Include="../src/common/Float16ToFloat32.cpp" />
+    <ClCompile Include="../src/common/mathutil.cpp" />
+    <ClCompile Include="../src/common/matrix_utils.cpp" />
+    <ClCompile Include="../src/common/MemoryBuffer.cpp" />
+    <ClCompile Include="../src/common/PackedEGLEnums_autogen.cpp" />
+    <ClCompile Include="../src/common/PackedEnums.cpp" />
+    <ClCompile Include="../src/common/PackedGLEnums_autogen.cpp" />
+    <ClCompile Include="../src/common/string_utils.cpp" />
+    <ClCompile Include="../src/common/system_utils.cpp" />
+    <ClCompile Include="../src/common/third_party\base\anglebase\sha1.cc" />
+    <ClCompile Include="../src/common/third_party\smhasher\src\PMurHash.cpp" />
+    <ClCompile Include="../src/common/tls.cpp" />
+    <ClCompile Include="../src/common/uniform_type_info_autogen.cpp" />
+    <ClCompile Include="../src/common/utilities.cpp" />
+    <ClCompile Include="texture_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="tga_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Win32Window.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Win32_system_utils.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="WindowsTimer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="../src/compiler/translator/BuiltInFunctionEmulator.cpp" />
+    <ClCompile Include="../src/compiler/translator/CallDAG.cpp" />
+    <ClCompile Include="../src/compiler/translator/CodeGen.cpp" />
+    <ClCompile Include="../src/compiler/translator/CollectVariables.cpp" />
+    <ClCompile Include="../src/compiler/translator/Compiler.cpp" />
+    <ClCompile Include="../src/compiler/translator/ConstantUnion.cpp" />
+    <ClCompile Include="../src/compiler/translator/Declarator.cpp" />
+    <ClCompile Include="../src/compiler/translator/Diagnostics.cpp" />
+    <ClCompile Include="../src/compiler/translator/DirectiveHandler.cpp" />
+    <ClCompile Include="../src/compiler/translator/ExtensionBehavior.cpp" />
+    <ClCompile Include="../src/compiler/translator/FlagStd140Structs.cpp" />
+    <ClCompile Include="../src/compiler/translator/FunctionLookup.cpp" />
+    <ClCompile Include="../src/compiler/translator/HashNames.cpp" />
+    <ClCompile Include="../src/compiler/translator/ImmutableString.cpp" />
+    <ClCompile Include="../src/compiler/translator/ImmutableStringBuilder.cpp" />
+    <ClCompile Include="../src/compiler/translator/InfoSink.cpp" />
+    <ClCompile Include="../src/compiler/translator/Initialize.cpp" />
+    <ClCompile Include="../src/compiler/translator/InitializeDll.cpp" />
+    <ClCompile Include="../src/compiler/translator/IntermNode.cpp" />
+    <ClCompile Include="../src/compiler/translator/IsASTDepthBelowLimit.cpp" />
+    <ClCompile Include="../src/compiler/translator/Operator.cpp" />
+    <ClCompile Include="../src/compiler/translator/OutputTree.cpp" />
+    <ClCompile Include="../src/compiler/translator/ParseContext.cpp" />
+    <ClCompile Include="../src/compiler/translator/PoolAlloc.cpp" />
+    <ClCompile Include="../src/compiler/translator/QualifierTypes.cpp" />
+    <ClCompile Include="../src/compiler/translator/ShaderLang.cpp" />
+    <ClCompile Include="../src/compiler/translator/ShaderVars.cpp" />
+    <ClCompile Include="../src/compiler/translator/Symbol.cpp" />
+    <ClCompile Include="../src/compiler/translator/SymbolTable.cpp" />
+    <ClCompile Include="../src/compiler/translator/SymbolTable_autogen.cpp" />
+    <ClCompile Include="../src/compiler/translator/SymbolUniqueId.cpp" />
+    <ClCompile Include="../src/compiler/translator/Types.cpp" />
+    <ClCompile Include="../src/compiler/translator/ValidateGlobalInitializer.cpp" />
+    <ClCompile Include="../src/compiler/translator/ValidateLimitations.cpp" />
+    <ClCompile Include="../src/compiler/translator/ValidateMaxParameters.cpp" />
+    <ClCompile Include="../src/compiler/translator/ValidateOutputs.cpp" />
+    <ClCompile Include="../src/compiler/translator/ValidateSwitch.cpp" />
+    <ClCompile Include="../src/compiler/translator/ValidateVaryingLocations.cpp" />
+    <ClCompile Include="../src/compiler/translator/VariablePacker.cpp" />
+    <ClCompile Include="../src/compiler/translator/blocklayout.cpp" />
+    <ClCompile Include="../src/compiler/translator/glslang_lex.cpp" />
+    <ClCompile Include="../src/compiler/translator/glslang_tab.cpp" />
+    <ClCompile Include="../src/compiler/translator/util.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/AddAndTrueToLoopCondition.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/BreakVariableAliasingInInnerLoops.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/ClampFragDepth.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/ClampPointSize.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/DeclareAndInitBuiltinsForInstancedMultiview.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/DeferGlobalInitializers.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/EmulateGLFragColorBroadcast.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/EmulatePrecision.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/ExpandIntegerPowExpressions.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/FoldExpressions.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/InitializeVariables.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/NameEmbeddedUniformStructs.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/PruneEmptyCases.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/PruneNoOps.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RecordConstantPrecision.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RegenerateStructNames.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RemoveArrayLengthMethod.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RemoveInvariantDeclaration.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RemovePow.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RemoveUnreferencedVariables.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteAtomicFunctionExpressions.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteDoWhile.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteStructSamplers.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteRepeatedAssignToSwizzled.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteTexelFetchOffset.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteUnaryMinusOperatorFloat.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteUnaryMinusOperatorInt.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/ScalarizeVecAndMatConstructorArgs.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/SeparateDeclarations.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/SimplifyLoopConditions.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/SplitSequenceOperator.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/UnfoldShortCircuitAST.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/UseInterfaceBlockFields.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/VectorizeVectorScalarArithmetic.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/FindMain.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/FindSymbolNode.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/IntermNodePatternMatcher.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/IntermNode_util.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/IntermTraverse.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/ReplaceVariable.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_util/RunAtTheEndOfShader.cpp" />
+    <ClCompile Include="../src/third_party/compiler/ArrayBoundsClamper.cpp" />
+    <ClCompile Include="../src/compiler/translator/OutputESSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/TranslatorESSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/BuiltInFunctionEmulatorGLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/ExtensionGLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/OutputGLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/OutputGLSLBase.cpp" />
+    <ClCompile Include="../src/compiler/translator/TranslatorGLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/VersionGLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/ASTMetadataHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/blocklayoutHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/BuiltInFunctionEmulatorHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/OutputHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/StructureHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/TextureFunctionHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/ImageFunctionHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/TranslatorHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/UniformHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/UtilsHLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/emulated_builtin_functions_hlsl_autogen.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/AddDefaultReturnStatements.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/ArrayReturnValueToOutParameter.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RemoveDynamicIndexing.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RemoveSwitchFallThrough.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/RewriteElseBlocks.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/SeparateArrayConstructorStatements.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/SeparateArrayInitialization.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/SeparateExpressionsReturningArrays.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/UnfoldShortCircuitToIf.cpp" />
+    <ClCompile Include="../src/compiler/translator/tree_ops/WrapSwitchStatementsInBlocks.cpp" />
+    <ClCompile Include="../src/compiler/translator/OutputVulkanGLSL.cpp" />
+    <ClCompile Include="../src/compiler/translator/TranslatorVulkan.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/DiagnosticsBase.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/DirectiveHandlerBase.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/DirectiveParser.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/ExpressionParser.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/Input.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/Lexer.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/Macro.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/MacroExpander.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/Preprocessor.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/Token.cpp" />
+    <ClCompile Include="../src/compiler/preprocessor/Tokenizer.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/BufferD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/CompilerD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/DeviceD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/DisplayD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/DynamicHLSL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/EGLImageD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/FramebufferD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/HLSLCompiler.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/ImageD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/IndexBuffer.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/IndexDataManager.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/NativeWindowD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/ProgramD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/RenderbufferD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/RendererD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/RenderTargetD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/ShaderD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/ShaderExecutableD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/SurfaceD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/SwapChainD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/TextureD3D.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/VertexBuffer.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/VertexDataManager.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Blit9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Buffer9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Context9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/DebugAnnotator9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Fence9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/formatutils9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Framebuffer9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Image9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/IndexBuffer9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/NativeWindow9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Query9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/Renderer9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/renderer9_utils.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/RenderTarget9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/ShaderExecutable9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/StateManager9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/SwapChain9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/TextureStorage9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/VertexBuffer9.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d9/VertexDeclarationCache.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Blit11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Buffer11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Clear11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Context11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/DebugAnnotator11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/dxgi_format_map_autogen.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/dxgi_support_table.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Fence11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/formatutils11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Framebuffer11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Image11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/IndexBuffer11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/InputLayoutCache.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/PixelTransfer11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Program11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/ProgramPipeline11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Query11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Renderer11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/renderer11_utils.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/RenderStateCache.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/RenderTarget11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/ResourceManager11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/ShaderExecutable11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/StateManager11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/StreamProducerD3DTexture.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/SwapChain11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/texture_format_table.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/texture_format_table_autogen.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/TextureStorage11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/TransformFeedback11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Trim11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/VertexArray11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/VertexBuffer11.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/win32/NativeWindow11Win32.cpp" />
+    <ClCompile Include="../src/third_party/systeminfo/SystemInfo.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/BlitGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/BufferGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/ClearMultiviewGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/CompilerGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/ContextGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/DispatchTableGL_autogen.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/DisplayGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/FenceNVGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/FramebufferGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/FunctionsGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/ImageGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/PathGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/ProgramGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/ProgramPipelineGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/QueryGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/RenderbufferGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/RendererGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/SamplerGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/ShaderGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/StateManagerGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/SurfaceGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/SyncGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/TextureGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/TransformFeedbackGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/VertexArrayGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/formatutilsgl.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/renderergl_utils.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/ContextWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/D3DTextureSurfaceWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/DisplayWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/DXGISwapChainWindowSurfaceWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/FunctionsWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/PbufferSurfaceWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/RendererWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/WindowSurfaceWGL.cpp" />
+    <ClCompile Include="../src/libANGLE/renderer/gl/wgl/wgl_utils.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_egl.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_egl_ext.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_gles_1_0_autogen.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_gles_2_0_autogen.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_gles_3_0_autogen.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_gles_3_1_autogen.cpp" />
+    <ClCompile Include="../src/libGLESv2/entry_points_gles_ext_autogen.cpp" />
+    <ClCompile Include="../src/libGLESv2/global_state.cpp" />
+    <ClCompile Include="../src/libGLESv2/libGLESv2_autogen.cpp" />
+    <ClCompile Include="../src/libGLESv2/proc_table_autogen.cpp" />
+    <ClCompile Include="../src/libEGL/libEGL.cpp" />
+    <ClCompile Include="../src/image_util/copyimage.cpp" />
+    <ClCompile Include="../src/image_util/imageformats.cpp" />
+    <ClCompile Include="../src/image_util/loadimage.cpp" />
+    <ClCompile Include="../src/image_util/loadimage_etc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ANGLECore\ANGLECore.vcxproj">
+      <Project>{9eb167fc-5655-4f5a-b3a0-7b834110546f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

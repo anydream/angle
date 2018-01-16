@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{9EB167FC-5655-4F5A-B3A0-7B834110546F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ANGLECore</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="configs.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="../../src/common/event_tracer.cpp" />
+    <ClCompile Include="../../src/libANGLE/AttributeMap.cpp" />
+    <ClCompile Include="../../src/libANGLE/Buffer.cpp" />
+    <ClCompile Include="../../src/libANGLE/Caps.cpp" />
+    <ClCompile Include="../../src/libANGLE/Compiler.cpp" />
+    <ClCompile Include="../../src/libANGLE/Config.cpp" />
+    <ClCompile Include="../../src/libANGLE/Context.cpp" />
+    <ClCompile Include="../../src/libANGLE/Context_gles_1_0.cpp" />
+    <ClCompile Include="../../src/libANGLE/ContextState.cpp" />
+    <ClCompile Include="../../src/libANGLE/Debug.cpp" />
+    <ClCompile Include="../../src/libANGLE/Device.cpp" />
+    <ClCompile Include="../../src/libANGLE/Display.cpp" />
+    <ClCompile Include="../../src/libANGLE/Error.cpp" />
+    <ClCompile Include="../../src/libANGLE/Fence.cpp" />
+    <ClCompile Include="../../src/libANGLE/Framebuffer.cpp" />
+    <ClCompile Include="../../src/libANGLE/FramebufferAttachment.cpp" />
+    <ClCompile Include="../../src/libANGLE/GLES1Renderer.cpp" />
+    <ClCompile Include="../../src/libANGLE/GLES1State.cpp" />
+    <ClCompile Include="../../src/libANGLE/HandleAllocator.cpp" />
+    <ClCompile Include="../../src/libANGLE/HandleRangeAllocator.cpp" />
+    <ClCompile Include="../../src/libANGLE/Image.cpp" />
+    <ClCompile Include="../../src/libANGLE/ImageIndex.cpp" />
+    <ClCompile Include="../../src/libANGLE/IndexRangeCache.cpp" />
+    <ClCompile Include="../../src/libANGLE/LoggingAnnotator.cpp" />
+    <ClCompile Include="../../src/libANGLE/MemoryProgramCache.cpp" />
+    <ClCompile Include="../../src/libANGLE/Observer.cpp" />
+    <ClCompile Include="../../src/libANGLE/Path.cpp" />
+    <ClCompile Include="../../src/libANGLE/Platform.cpp" />
+    <ClCompile Include="../../src/libANGLE/Program.cpp" />
+    <ClCompile Include="../../src/libANGLE/ProgramLinkedResources.cpp" />
+    <ClCompile Include="../../src/libANGLE/ProgramPipeline.cpp" />
+    <ClCompile Include="../../src/libANGLE/Query.cpp" />
+    <ClCompile Include="../../src/libANGLE/Renderbuffer.cpp" />
+    <ClCompile Include="../../src/libANGLE/ResourceManager.cpp" />
+    <ClCompile Include="../../src/libANGLE/Sampler.cpp" />
+    <ClCompile Include="../../src/libANGLE/Shader.cpp" />
+    <ClCompile Include="../../src/libANGLE/State.cpp" />
+    <ClCompile Include="../../src/libANGLE/Stream.cpp" />
+    <ClCompile Include="../../src/libANGLE/Surface.cpp" />
+    <ClCompile Include="../../src/libANGLE/Texture.cpp" />
+    <ClCompile Include="../../src/libANGLE/Thread.cpp" />
+    <ClCompile Include="../../src/libANGLE/TransformFeedback.cpp" />
+    <ClCompile Include="../../src/libANGLE/Uniform.cpp" />
+    <ClCompile Include="../../src/libANGLE/VaryingPacking.cpp" />
+    <ClCompile Include="../../src/libANGLE/VertexArray.cpp" />
+    <ClCompile Include="../../src/libANGLE/VertexAttribute.cpp" />
+    <ClCompile Include="../../src/libANGLE/WorkerThread.cpp" />
+    <ClCompile Include="../../src/libANGLE/angletypes.cpp" />
+    <ClCompile Include="../../src/libANGLE/es3_copy_conversion_table_autogen.cpp" />
+    <ClCompile Include="../../src/libANGLE/format_map_autogen.cpp" />
+    <ClCompile Include="../../src/libANGLE/formatutils.cpp" />
+    <ClCompile Include="../../src/libANGLE/params.cpp" />
+    <ClCompile Include="../../src/libANGLE/queryconversions.cpp" />
+    <ClCompile Include="../../src/libANGLE/queryutils.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/ContextImpl.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/driver_utils.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/DeviceImpl.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/DisplayImpl.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/Format_table_autogen.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/SurfaceImpl.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/TextureImpl.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/load_functions_table_autogen.cpp" />
+    <ClCompile Include="../../src/libANGLE/renderer/renderer_utils.cpp" />
+    <ClCompile Include="../../src/libANGLE/validationEGL.cpp" />
+    <ClCompile Include="../../src/libANGLE/validationES.cpp" />
+    <ClCompile Include="../../src/libANGLE/validationES1.cpp" />
+    <ClCompile Include="../../src/libANGLE/validationES2.cpp" />
+    <ClCompile Include="../../src/libANGLE/validationES3.cpp" />
+    <ClCompile Include="../../src/libANGLE/validationES31.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

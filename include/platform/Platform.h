@@ -15,22 +15,22 @@
 #define EGL_PLATFORM_ANGLE_PLATFORM_METHODS_ANGLEX 0x3482
 
 #if defined(_WIN32)
-#    if !defined(LIBANGLE_IMPLEMENTATION)
-#        define ANGLE_PLATFORM_EXPORT __declspec(dllimport)
-#    else
-#        define ANGLE_PLATFORM_EXPORT __declspec(dllexport)
-#    endif
+#   if !defined(LIBANGLE_IMPLEMENTATION)
+#       define ANGLE_PLATFORM_EXPORT //__declspec(dllimport)
+#   else
+#       define ANGLE_PLATFORM_EXPORT //__declspec(dllexport)
+#   endif
 #elif defined(__GNUC__) || defined(__clang__)
-#    define ANGLE_PLATFORM_EXPORT __attribute__((visibility("default")))
+#   define ANGLE_PLATFORM_EXPORT __attribute__((visibility ("default")))
 #endif
 #if !defined(ANGLE_PLATFORM_EXPORT)
-#    define ANGLE_PLATFORM_EXPORT
+#   define ANGLE_PLATFORM_EXPORT
 #endif
 
 #if defined(_WIN32)
-#    define ANGLE_APIENTRY __stdcall
+#   define ANGLE_APIENTRY //__stdcall
 #else
-#    define ANGLE_APIENTRY
+#   define ANGLE_APIENTRY
 #endif
 
 namespace angle
@@ -320,4 +320,4 @@ typedef void(ANGLE_APIENTRY *ResetDisplayPlatformFunc)(angle::EGLDisplayType);
 // This function is not exported
 angle::PlatformMethods *ANGLEPlatformCurrent();
 
-#endif  // ANGLE_PLATFORM_H
+#endif // ANGLE_PLATFORM_H
