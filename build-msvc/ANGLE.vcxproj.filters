@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Sample">
-      <UniqueIdentifier>{7986a3a6-5ee3-41d6-a1ab-9cc127c0f72e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="angle_translator_sources">
       <UniqueIdentifier>{86c5944d-75a9-4876-be8c-ae2b922a3696}</UniqueIdentifier>
     </Filter>
@@ -64,38 +61,11 @@
     <Filter Include="libangle_image_util_sources">
       <UniqueIdentifier>{2ba756e1-3fd7-425b-928b-7aaa48b2f9f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="libangle_sources">
+      <UniqueIdentifier>{9d26545d-2401-4f4d-80e8-2251fe269db4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="SampleApplication.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="Win32_system_utils.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="shader_utils.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="Win32Window.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="EGLWindow.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="OSWindow.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="WindowsTimer.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="texture_utils.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="tga_utils.cpp">
-      <Filter>Sample</Filter>
-    </ClCompile>
     <ClCompile Include="../src/compiler/translator/tree_ops/AddAndTrueToLoopCondition.cpp">
       <Filter>angle_translator_sources</Filter>
     </ClCompile>
@@ -429,9 +399,6 @@
     <ClCompile Include="../src/compiler/translator/tree_ops/UnfoldShortCircuitToIf.cpp">
       <Filter>angle_translator_hlsl_sources</Filter>
     </ClCompile>
-    <ClCompile Include="../src/compiler/translator/UniformHLSL.cpp">
-      <Filter>angle_translator_hlsl_sources</Filter>
-    </ClCompile>
     <ClCompile Include="../src/compiler/translator/UtilsHLSL.cpp">
       <Filter>angle_translator_hlsl_sources</Filter>
     </ClCompile>
@@ -625,9 +592,6 @@
       <Filter>libangle_d3d11_sources</Filter>
     </ClCompile>
     <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/dxgi_format_map_autogen.cpp">
-      <Filter>libangle_d3d11_sources</Filter>
-    </ClCompile>
-    <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/dxgi_support_table.cpp">
       <Filter>libangle_d3d11_sources</Filter>
     </ClCompile>
     <ClCompile Include="../src/libANGLE/renderer/d3d/d3d11/Fence11.cpp">
@@ -918,5 +882,275 @@
     <ClCompile Include="../src/image_util/loadimage_etc.cpp">
       <Filter>libangle_image_util_sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\common\PoolAlloc.cpp">
+      <Filter>libangle_common_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\tree_util\ReplaceShadowingVariables.cpp">
+      <Filter>angle_translator_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\ValidateAST.cpp">
+      <Filter>angle_translator_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\AtomicCounterFunctionHLSL.cpp">
+      <Filter>angle_translator_hlsl_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\ResourcesHLSL.cpp">
+      <Filter>angle_translator_hlsl_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\ShaderStorageBlockOutputHLSL.cpp">
+      <Filter>angle_translator_hlsl_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\ShaderStorageBlockFunctionHLSL.cpp">
+      <Filter>angle_translator_hlsl_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\tree_ops\EmulateGLDrawID.cpp">
+      <Filter>angle_translator_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compiler\translator\tree_ops\RewriteExpressionsWithShaderStorageBlock.cpp">
+      <Filter>angle_translator_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/angletypes.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/AttributeMap.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/BlobCache.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Buffer.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Caps.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Compiler.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Config.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Context.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Context_gles_1_0.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/ContextImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Debug.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Device.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/DeviceImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Display.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/DisplayImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/driver_utils.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/EGLSync.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Error.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/es3_copy_conversion_table_autogen.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/common/event_tracer.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Fence.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/format_map_autogen.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/Format_table_autogen.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/formatutils.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Framebuffer.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/FramebufferAttachment.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/GLES1Renderer.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/GLES1State.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/HandleAllocator.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/HandleRangeAllocator.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Image.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/ImageIndex.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/IndexRangeCache.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/load_functions_table_autogen.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/LoggingAnnotator.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/MemoryObject.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/MemoryProgramCache.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Observer.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Path.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Platform.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Program.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/ProgramLinkedResources.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/ProgramPipeline.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Query.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/queryconversions.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/QueryImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/queryutils.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Renderbuffer.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/renderer_utils.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/ResourceManager.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Sampler.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Semaphore.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Shader.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/ShaderImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/State.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Stream.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Surface.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/SurfaceImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Texture.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/renderer/TextureImpl.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Thread.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/TransformFeedback.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/Uniform.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/validationEGL.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/validationES.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/validationES1.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/validationES2.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/validationES3.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/validationES31.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/VaryingPacking.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/VertexArray.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/VertexAttribute.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="../src/libANGLE/WorkerThread.cpp">
+      <Filter>libangle_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libANGLE\renderer\d3d\DynamicImage2DHLSL.cpp">
+      <Filter>libangle_d3d_shared_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libANGLE\renderer\d3d\d3d11\dxgi_support_table_autogen.cpp">
+      <Filter>libangle_d3d11_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libANGLE\renderer\d3d\d3d11\ExternalImageSiblingImpl11.cpp">
+      <Filter>libangle_d3d11_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libANGLE\renderer\d3d\d3d11\MappedSubresourceVerifier11.cpp">
+      <Filter>libangle_d3d11_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\libANGLE\renderer\d3d\d3d11\converged\CompositorNativeWindow11.cpp">
+      <Filter>libangle_d3d11_win32_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\third_party\xxhash\xxhash.c">
+      <Filter>libangle_common_sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\third_party\xxhash\xxhash_fuzzer.cpp">
+      <Filter>libangle_common_sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="export.def" />
   </ItemGroup>
 </Project>

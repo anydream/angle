@@ -28,7 +28,7 @@
 #endif
 
 #if defined(_WIN32)
-#   define ANGLE_APIENTRY //__stdcall
+#   define ANGLE_APIENTRY __stdcall
 #else
 #   define ANGLE_APIENTRY
 #endif

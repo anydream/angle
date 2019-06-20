@@ -16,6 +16,7 @@
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
 
+#if 0
 ANGLE_UTIL_EXPORT extern PFNEGLCHOOSECONFIGPROC eglChooseConfig;
 ANGLE_UTIL_EXPORT extern PFNEGLCOPYBUFFERSPROC eglCopyBuffers;
 ANGLE_UTIL_EXPORT extern PFNEGLCREATECONTEXTPROC eglCreateContext;
@@ -118,5 +119,6 @@ using GenericProc = void (*)();
 using LoadProc    = GenericProc(KHRONOS_APIENTRY *)(const char *);
 ANGLE_UTIL_EXPORT void LoadEGL(LoadProc loadProc);
 }  // namespace angle
+#endif
 
 #endif  // UTIL_EGL_LOADER_AUTOGEN_H_

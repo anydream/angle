@@ -9,15 +9,16 @@
 //   Simple GLES function loader.
 
 #ifndef UTIL_GLES_LOADER_AUTOGEN_H_
-#define UTIL_GLES_LOADER_AUTOGEN_H_
+#    define UTIL_GLES_LOADER_AUTOGEN_H_
 
-#if defined(GL_GLES_PROTOTYPES) && GL_GLES_PROTOTYPES
-#    error "Don't define GL prototypes if you want to use a loader!"
-#endif  // defined(GL_GLES_PROTOTYPES)
+#    if defined(GL_GLES_PROTOTYPES) && GL_GLES_PROTOTYPES
+//#    error "Don't define GL prototypes if you want to use a loader!"
+#    endif  // defined(GL_GLES_PROTOTYPES)
 
-#include "angle_gl.h"
-#include "util/util_export.h"
+#    include "angle_gl.h"
+#    include "util/util_export.h"
 
+#if 0
 ANGLE_UTIL_EXPORT extern PFNGLALPHAFUNCPROC glAlphaFunc;
 ANGLE_UTIL_EXPORT extern PFNGLCLIPPLANEFPROC glClipPlanef;
 ANGLE_UTIL_EXPORT extern PFNGLCOLOR4FPROC glColor4f;
@@ -1579,5 +1580,6 @@ using GenericProc = void (*)();
 using LoadProc    = GenericProc(KHRONOS_APIENTRY *)(const char *);
 ANGLE_UTIL_EXPORT void LoadGLES(LoadProc loadProc);
 }  // namespace angle
+#endif
 
-#endif  // UTIL_GLES_LOADER_AUTOGEN_H_
+#    endif  // UTIL_GLES_LOADER_AUTOGEN_H_
