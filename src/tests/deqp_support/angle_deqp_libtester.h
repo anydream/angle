@@ -12,9 +12,9 @@
 
 #if defined(_WIN32)
 #    if defined(ANGLE_DEQP_LIBTESTER_IMPLEMENTATION)
-#        define ANGLE_LIBTESTER_EXPORT //__declspec(dllexport)
+#        define ANGLE_LIBTESTER_EXPORT __declspec(dllexport)
 #    else
-#        define ANGLE_LIBTESTER_EXPORT //__declspec(dllimport)
+#        define ANGLE_LIBTESTER_EXPORT __declspec(dllimport)
 #    endif
 #elif defined(__GNUC__)
 #    if defined(ANGLE_DEQP_LIBTESTER_IMPLEMENTATION)

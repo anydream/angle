@@ -8,7 +8,7 @@
       <AdditionalIncludeDirectories>../src;../include;../include/GLSLANG;../src/common/third_party/base;../src/third_party/khronos;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NOMINMAX;ANGLE_ENABLE_D3D11;ANGLE_ENABLE_D3D9;ANGLE_ENABLE_OPENGL;ANGLE_ENABLE_HLSL;ANGLE_ENABLE_GLSL;GL_GLES_PROTOTYPES;GL_GLEXT_PROTOTYPES;EGL_EGL_PROTOTYPES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NOMINMAX;ANGLE_ENABLE_D3D11;ANGLE_ENABLE_D3D9;ANGLE_ENABLE_OPENGL;ANGLE_ENABLE_HLSL;ANGLE_ENABLE_GLSL;GL_GLES_PROTOTYPES;GL_GLEXT_PROTOTYPES;EGL_EGL_PROTOTYPES;LIBANGLE_IMPLEMENTATION;__SCITECH_SNAP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>$(IntDir)reduce\%(RelativeDir)</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)reduce\%(RelativeDir)</ObjectFileName>
     </ClCompile>
